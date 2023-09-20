@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Buchung</title>
+    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h1 class="text-center my-5">Mobile Buchung</h1>
+    <div class="container rounded py-2 bg-body-secondary shadow">
+        <h2>Product Management System</h2>
+        <div class="mb-3 form-group">
+            <label for="ProductName" class="form-label">Product Name</label>
+            <input type="text" class="form-control" id="ProductName" oninput="validateProductName()">
+            <small id="nameError" class="text-danger d-none">Invalid input</small>
+        </div>
+        <div class="mb-3 form-group">
+            <label for="ProductPrice" class="form-label">Product Price</label>
+            <input type="number" class="form-control" id="ProductPrice">
+        </div>
+        <div class="mb-3 form-group">
+            <label for="ProductCategory" class="form-label">Product Category</label>
+            <input type="text" class="form-control" id="ProductCategory">
+        </div>
+        <div class="mb-3 form-group">
+            <label for="ProductDescription" class="form-label">Product Description</label>
+            <textarea class="form-control" cols="30" rows="5" id="ProductDescription"></textarea>
+        </div>
+        <button type="button" class="btn btn-success" id="addButton" onclick="addProduct()">Add Product</button>
+        <button type="button" class="btn btn-warning" id="updateButton" onclick="updateAssignment()">Update
+            Product</button>
+
+        <br><br />
+        <div class="mb-3 form-group">
+            <label for="ProductSearch" class="form-label"></label>
+            <input type="text" class="form-control" id="productSearch" oninput="searchProduct(this.value)"
+                placeholder="Search">
+        </div>
+        <h3 id="noData"></h3>
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product price</th>
+                    <th scope="col">Product Category</th>
+                    <th scope="col">Product Description</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody id=tableBody>
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js
+"></script>
+</body>
+
+</html>
